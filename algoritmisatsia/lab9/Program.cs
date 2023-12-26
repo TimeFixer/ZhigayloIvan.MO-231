@@ -10,7 +10,6 @@ namespace ConsoleApplication25
     {
         static void Main(string[] args)
         {
-            bool prost = true;
             int a = 106732567;
             int b = 152673836;
             double result_a = Math.Pow(a, 0.25);
@@ -19,12 +18,10 @@ namespace ConsoleApplication25
             int b_c = Convert.ToInt32(Math.Floor(result_b));
             for (int i = a_c+1; i <= b_c; i++)
             {
-                prost = true;
                 for (int k = 2; k <= i - 1; k++)
                 {
                     if (i % k == 0)
                     {
-                        prost = false;
                         break;
                     }
                 }
