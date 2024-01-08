@@ -6,12 +6,12 @@ class razvedka
     {
         try
         {
-            StreamReader sr = new StreamReader("input.txt"); //ввод
+            StreamReader sr = new StreamReader("input.txt");
             int number = Convert.ToInt32(sr.ReadLine());
             int[] array = new int[number];
             try
             {
-                StreamWriter sw = new StreamWriter("output.txt"); //вывод
+                StreamWriter sw = new StreamWriter("output.txt");
                 sw.WriteLine(div(array));
                 sw.Close();
             }
