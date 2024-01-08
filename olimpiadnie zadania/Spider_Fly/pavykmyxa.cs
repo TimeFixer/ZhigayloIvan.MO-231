@@ -9,7 +9,7 @@ namespace muha
         const int Z = 2;
         static void Main(string[] args)
         {
-            string path = "\\input.txt"; //Расположение файла
+            string path = "input.txt";
             StreamReader reader = new StreamReader(path);
             string state = "none";
             bool sw = false;
