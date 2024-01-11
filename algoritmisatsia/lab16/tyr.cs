@@ -1,8 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp6
 {
@@ -11,15 +9,15 @@ namespace ConsoleApp6
         static void Main(string[] args)
         {
             List<int> point_stop = new List<int>();
-            Console.Write("длина пути "); 
+            Console.WriteLine("длина пути ");
             int way = Convert.ToInt32(Console.ReadLine());
-            Console.Write("время захода и восхода солнца ");
+            Console.WriteLine("время захода и восхода солнца (формат 00:00)");
             string[] sun = Console.ReadLine().Split();
-            Console.Write("скорость передвижения в км/ч "); 
+            Console.WriteLine("скорость передвижения в км/ч ");
             int speed = Convert.ToInt32(Console.ReadLine());
-            Console.Write("кол-во временных пунктов "); 
+            Console.WriteLine("кол-во временных пунктов ");
             int count_points = Convert.ToInt32(Console.ReadLine());
-            Console.Write("расстояние от начала пути до каждого пункта ");
+            Console.WriteLine("расстояние от начала пути до каждого пункта ");
             float[] distances = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(i => float.Parse(i)).ToArray<float>();
             for (int i = distances.Length - 1; i > 0; i--)
             {
@@ -42,8 +40,7 @@ namespace ConsoleApp6
                 var = 0;
             }
             point_stop.Add(distances.Length);
-            Console.Write("места где туристы останавливались "); foreach (int h in point_stop) { Console.Write(h + " "); }
-            Console.Write("\n");
+            Console.Write("места где туристы останавливались "); foreach (int point in point_stop) { Console.Write(point + " "); }
             Console.WriteLine("туристы шли дней - " + point_stop.Count);
         }
     }
