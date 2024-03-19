@@ -1,8 +1,5 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApplication38
 {
@@ -78,25 +75,7 @@ namespace ConsoleApplication38
                 }
                 if (sus == rebra.Length)
                 {
-                    if (!tree.ContainsKey(check.Peek()))
-                    {
-                        foreach (Rebro s in rebra)
-                        {
-                            if (!tree.ContainsKey(s.v1))
-                            {
-                                forest++;
-                                tree.Add(s.v1, forest);
-                                break;
-                            }
-                            if (!tree.ContainsKey(s.v2))
-                            {
-                                forest++;
-                                tree.Add(s.v2, forest);
-                                break;
-                            }
-                        }
-                    }
-                    else check.Pop();
+                    if (tree.ContainsKey(check.Peek())) check.Pop();
                 }
                
             }
