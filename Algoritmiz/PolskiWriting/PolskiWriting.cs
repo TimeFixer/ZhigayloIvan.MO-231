@@ -65,7 +65,7 @@ class Program
                                 stack.Push(Convert.ToString("(" + operand1 + " * " + operand2 + ")"));
                                 break;
                             case "/":
-                                 if (number2 == "0")
+                                 if (operand2 == "0")
                                 {
                                     Console.WriteLine("Деление на ноль!");
                                     return;
