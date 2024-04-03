@@ -53,7 +53,7 @@ namespace ConsoleApp40
             }
             foreach (KeyValuePair<string, int> kvp in Ans)
             {
-                Console.WriteLine("Вершина = {0}, Кротчайший путь = {1}", kvp.Key, kvp.Value);
+                Console.WriteLine("Вершина = {0}, Кратчайший путь = {1}", kvp.Key, kvp.Value);
             }
         }
         public class Rebro
