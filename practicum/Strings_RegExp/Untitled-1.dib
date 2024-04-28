@@ -1,0 +1,64 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"languageName":"csharp","name":"csharp"}]}}
+
+#!csharp
+
+using System.Text.RegularExpressions;
+
+static bool TimeFormat(string input)
+    {
+        Regex regex = new Regex(@"^([0-1][0-9]|2[0-3]):[0-5][0-9]$");
+        return regex.IsMatch(input);
+    }
+string proverkaTime = "23:59";
+TimeFormat(proverkaTime)
+
+#!csharp
+
+using System.Diagnostics;
+    static string symbols = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    static Random r = new Random();
+    static char GetRandomChar()
+    {
+        var index = r.Next(symbols.Length);
+        return symbols[index];
+    }
+Stopwatch stopwatch = new Stopwatch();
+StringBuilder proverka1 = new StringBuilder("awerlkdhcq");
+stopwatch.Start();
+for(int i = 0 ; i < 1000000; i++){
+        proverka1.Replace(proverka1[i % 10], GetRandomChar());
+    }
+stopwatch.Stop();
+stopwatch.Elapsed
+
+#!csharp
+
+using System.Diagnostics;
+    static string symbols = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    static Random r = new Random();
+    static char GetRandomChar()
+    {
+        var index = r.Next(symbols.Length);
+        return symbols[index];
+    }
+Stopwatch stopwatch = new Stopwatch();
+string proverka2 = "awerlkdhcq";
+stopwatch.Start();
+for(int i = 0 ; i < 1000000; i++){
+        proverka2.Replace(proverka2[i % 10], GetRandomChar());
+    }
+    stopwatch.Stop();
+stopwatch.Elapsed
+
+#!csharp
+
+using System.Text.RegularExpressions;
+string proverkaEmail = "i.zhi+-aylo@marketing.example.com.co!m";
+static bool EmailFormat(string input)
+    {
+        Regex regex = new Regex(@"^[a-zA-Z0-9\.+-]+@[a-z]+\.[a-z]+(\.[a-z]+)+?$");
+        return regex.IsMatch(input);
+    }
+EmailFormat(proverkaEmail)
