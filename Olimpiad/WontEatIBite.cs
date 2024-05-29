@@ -1,9 +1,6 @@
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Security.Cryptography;
 using System;
-
 class HelloWorld
 {
     static void Read(out int a, out int b, StreamReader file)
@@ -91,6 +88,9 @@ class HelloWorld
         path = path - longpath;
         StreamWriter output_file = new StreamWriter("output.txt");
         output_file.WriteLine(path);
+        output_file.Close();
+    }
+}
         output_file.Close();
     }
 }
